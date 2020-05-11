@@ -1,38 +1,108 @@
+@font-face {
+  font-family: Signature;
+  src: url('./JustSignature-92w7.ttf') format('truetype');
+}
+
 .App {
   text-align: center;
+  font-family: 'Signature', Helvetica;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .navigation .title {
+  font-family: 'Signature', Helvetica;
+  font-size: 32px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .navigation {
+  width: 80%;
+  margin: auto;
   display: flex;
-  flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.project {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 20px 0px 20px 0px;
+  position: relative;
+}
+
+.project:hover {
+  opacity: 1;
+}
+
+.project-name {
+  position: absolute;
+  top: 30%;
+  left: 10px;
+  text-align: left;
+
+}
+
+.project-name .heading {
+  background: black;
   color: white;
+  padding: 2px 5px 2px 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.project-name .subheading {
+  background: black;
+  color: white;
+  padding: 2px 5px 3px 5px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-variant: small-caps;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.project .project-item img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding: 0 4px;
+}
+
+.gallery .gallery-column {
+  flex: 30%;
+  max-width: 30%;
+  padding: 0 4px;
+}
+
+.gallery .gallery-column .gallery-item {
+  cursor: pointer;
+}
+
+.gallery .gallery-column .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.modal {
+  height: 20px;
+  width: 20px;
+  background-color: rebeccapurple;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .gallery .gallery-column {
+    flex: 50%;
+    max-width: 50%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .gallery .gallery-column {
+    flex: 100%;
+    max-width: 100%;
   }
 }
