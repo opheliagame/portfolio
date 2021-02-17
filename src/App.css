@@ -1,25 +1,40 @@
 @font-face {
-  font-family: Signature;
-  src: url('./JustSignature-92w7.ttf') format('truetype');
+  font-family: WorkSans;
+  src: url('./WorkSans-Regular.ttf') format('truetype');
 }
 
 .App {
   text-align: center;
-  font-family: 'Signature', Helvetica;
+  font-family: 'WorkSans', Helvetica;
+  background-color: #EFF2F1;
+  width: 100%;
+  height: 100vh;
 }
 
 .App .navigation .title {
-  font-family: 'Signature', Helvetica;
-  font-size: 32px;
+  font-family: 'WorkSans', Helvetica;
+  font-size: 48px;
+  color: #EFF2F1;
 }
 
 .App .navigation {
-  width: 80%;
+  /* width: 80%; */
+  padding: 0% 10% 0% 10%;
+  height: 100px;
   margin: auto;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+  background-color: #F2BEFC;
+  color: #685F74;
+
+}
+
+.App .navigation a {
+  color: #685F74;
+  font-size: 32px;
+  text-decoration: none;
 }
 
 .project {
@@ -89,6 +104,54 @@
   height: 20px;
   width: 20px;
   background-color: rebeccapurple;
+}
+
+.cards-container {
+  padding: 20px 150px 20px 150px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  height: 200px;
+  /* grid-template-rows: repeat(auto-fill, minmax(200px, 1fr)); */
+  grid-gap: 2rem;
+  
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 10% auto 200px;
+  grid-template-rows: 200px auto;
+  background-color: #EBFFFD;
+  cursor: pointer;
+  /* grid-gap: 1rem; */
+}
+
+.card-container .image {
+  /* background-color: red; */
+
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  
+}
+.card-container .tags {
+  /* background-color: green; */
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+}
+.card-container .title {
+  /* background-color: white; */
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  font-size: 28px;
+  text-align: right;
+  padding: 0px 8px 0px 8px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */

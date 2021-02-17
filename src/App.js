@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import About from './components/About';
 import Header from './components/Header';
+import Card from './components/Card';
 import Project from './components/Project';
 import projects from './projects';
 import Gallery from './components/Gallery';
@@ -17,7 +18,13 @@ function App() {
 
         <Route path='/about' component={About} />
 
-        <Gallery oimages={images}/>
+        {/* <Gallery oimages={images}/> */}
+        <div className="cards-container">
+          <Card title="my first shader!" tags="tags" image="/portfolio/logo192.png"/>
+          <Card title="title" tags="tags" image="/portfolio/logo192.png"/>
+          <Card title="title" tags="tags" image="/portfolio/logo192.png"/>
+        </div>
+
       </div>
     </BrowserRouter>
   );
